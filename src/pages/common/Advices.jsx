@@ -1,4 +1,5 @@
 import { useForm } from "react-hook-form";
+import { z } from "zod";
 
 const inputsFields = [
     ['text', 'Nom et Prénom (s)'],
@@ -6,6 +7,11 @@ const inputsFields = [
     ['text', 'Titre du projet'],
     ['text', 'Description du projet']
 ];
+
+// const loginSchema = z.object({
+//     name: nameSchema,
+//     email: emailSchema,
+// })
 
 function Advices(){
     const form = useForm();
@@ -21,7 +27,9 @@ function Advices(){
                 type={type}
                 placeholder={placeholder}
                 {...form.register(type)}
+                className="bg-gray-50 border border-purple-700"
             />
+            <small>{form.formState.errors[type]?.message}</small>
         </div>
     )
 
@@ -33,12 +41,12 @@ function Advices(){
                     Donnez vos avis afin de permettre à notre équipe de prendre en compte vos besoin et de vous proposer le meilleur durant les compétitions!
                 </p>
             </div>
-            <div className='bg-white h-48 flex items-center justify-center rounded-lg font-bold text-xl'>
+            <div className='flex flex-col items-center gap-4 bg-white flex items-center justify-center rounded-lg font-bold text-xl py-4'>
                 <h1>Formulaire de soumission d'avis</h1>
                 <form onSubmit={form.handleSubmit(onSubmit)}>
                     <div>
                         {inputsFields.map((fields, index) => (
-                            <div key={index}>
+                            <div key={index} className="flex gap-4 items-center">
                                 {renderInputsFields(...fields)}
                             </div>
                         ))}
