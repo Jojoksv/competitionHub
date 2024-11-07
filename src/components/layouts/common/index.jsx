@@ -42,7 +42,7 @@ function CommonLayout(){
                     <Link to='http://joseph-kossouvi.vercel.app' target="_blank" rel="noopener noreferrer">&copy; Joseph Kossouvi</Link>
                 </div>
                 <main className="lg:pl-64">
-                    <div className={`px-4 py-8 py-24 sm:px-6 lg:px-8`}>
+                    <div className={`px-4 py-16 py-24 sm:px-6 lg:px-8`}>
                         <Outlet />
                     </div>
                 </main>
