@@ -6,12 +6,14 @@ const inputsFields = [
     ['text', 'Titre du projet'],
     ['text', 'Description du projet']
 ];
-console.log(...inputsFields);
 
 function Advices(){
     const form = useForm();
 
-    const onSubmit = (data) => console.log(data)
+    const onSubmit = async (data) => {
+        await new Promise((resolver) => setTimeout(resolver, 1000))
+        console.log(data);
+    }
 
     const renderInputsFields = (type, placeholder) => (
         <div>
@@ -41,7 +43,12 @@ function Advices(){
                             </div>
                         ))}
                     </div>
-                    <button>Soummetre</button>
+                    <button
+                        type="submit"
+                        disabled={form.formState.isSubmitting}
+                    >
+                    {form.formState.isSubmitting ? 'Soummition...' : 'Soummetre'}
+                    </button>
                 </form> 
             </div>
         </div>
