@@ -74,7 +74,7 @@ function Challenges(){
                                 <button 
                                 onClick={() => navigate('advices')}
                                 className="w-full bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 flex items-center justify-center">
-                                    Vos avis
+                                    Proposez votre projet
                                     <ArrowRight className="ml-2 h-4 w-4" />
                                 </button>
                             </div>
