@@ -26,15 +26,15 @@ function CommonLayout(){
     return(
         <div className="min-h-screen bg-gray-100">
             <div>
-                <div className="lg:hidden fixed top-8 right-6 z-50 flex items-center gap-2">
+                <div className="lg:hidden fixed top-8 right-3 z-50 flex items-center gap-2">
                     <div className="p-1 cursor-pointer hover:bg-gray-200 rounded-3xl">
                         <GoPerson
-                            size={ 22 }
+                            size={ 24 }
                         />
                     </div>
                     <div className="p-1 cursor-pointer hover:bg-gray-200 rounded-3xl">
                         <TfiBell
-                            size={ 22 }
+                            size={ 24 }
                         />
                     </div>
                     <div
@@ -51,7 +51,7 @@ function CommonLayout(){
                     mobileMenuOpen={mobileMenuOpen}
                     setMobileMenuOpen={setMobileMenuOpen}
                 />
-                <Link to="/" className="fixed text-indigo-700 lg:text-gray-300 font-semibold top-4 left-6 lg:bottom-3 lg:top-auto z-20 flex items-center gap-1">
+                <Link to="/" className="fixed text-indigo-600 lg:text-gray-300 font-semibold top-4 left-3 lg:bottom-3 lg:top-auto z-20 flex items-center gap-1">
                     <img src={logo} alt="logo" className="h-16" />
                     <span className="font-extrabold text-2xl">Skillify</span>
                 </Link>
