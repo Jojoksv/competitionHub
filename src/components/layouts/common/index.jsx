@@ -1,5 +1,6 @@
 import { useState } from "react";
 import NavBar from "./NavBar"
+import logo from '../../../assets/images/logo.png'
 import { PiSealQuestion } from "react-icons/pi";
 import { RxCountdownTimer } from "react-icons/rx";
 import { RiBarChart2Fill } from "react-icons/ri";
@@ -7,6 +8,7 @@ import { AiOutlineExclamationCircle } from "react-icons/ai";
 import { LuHome } from "react-icons/lu";
 import { GoTrophy } from "react-icons/go";
 import { Link, Outlet } from "react-router-dom";
+import { IoPersonOutline } from "react-icons/io5";
 
 function CommonLayout(){
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -23,10 +25,15 @@ function CommonLayout(){
     return(
         <div className="min-h-screen bg-gray-100">
             <div>
-                <div className="lg:hidden fixed top-6 right-6 z-50">
+                <div className="lg:hidden fixed top-8 right-6 z-50 flex items-center gap-2">
+                    <div className="p-2 cursor-pointer hover:bg-gray-200 rounded-3xl">
+                        <IoPersonOutline
+                            size={ 22 }
+                        />
+                    </div>
                     <div
                         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                        className={`rounded-md bg-white shadow-lg ${mobileMenuOpen ? 'menuOpen' : 'menuClosed'} menu`}
+                        className={`rounded-md bg-white cursor-pointer ${mobileMenuOpen ? 'menuOpen' : 'menuClosed'} menu`}
                     >
                         <div className="barre1"></div>
                         <div className="barre2"></div>
@@ -38,11 +45,12 @@ function CommonLayout(){
                     mobileMenuOpen={mobileMenuOpen}
                     setMobileMenuOpen={setMobileMenuOpen}
                 />
-                <div className="fixed text-indigo-800 lg:text-gray-300 font-semibold top-8 left-6 lg:bottom-3 lg:top-auto z-20">
-                    <Link to='http://joseph-kossouvi.vercel.app' target="_blank" rel="noopener noreferrer">&copy; Joseph Kossouvi</Link>
-                </div>
+                <Link to="/" className="fixed text-indigo-700 lg:text-gray-300 font-semibold top-4 left-6 lg:bottom-3 lg:top-auto z-20 flex items-center gap-1">
+                    <img src={logo} alt="logo" className="h-16" />
+                    <span className="font-extrabold text-2xl">Skillify</span>
+                </Link>
                 <main className="lg:pl-64">
-                    <div className={`px-4 py-16 py-24 sm:px-6 lg:px-8`}>
+                    <div className={`px-4 py-10 pt-36 sm:px-6 lg:px-8`}>
                         <Outlet />
                     </div>
                 </main>

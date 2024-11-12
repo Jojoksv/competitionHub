@@ -42,7 +42,7 @@ function Advices() {
     const onSubmit = (data) => {
         postProject(data, {
             onSuccess: (data) => console.log(data),
-            onError: (error) => form.setError("apiError", { message: error.message })
+            onError: (error) => form.setError("apiError", { message: error.response.message })
         });
     };
 
@@ -83,7 +83,7 @@ function Advices() {
                             </div>
                         </div>
                         {form.formState.errors.apiError && (
-                            <div className="text-red-600 font-normal text-sm text-center">{form.formState.errors.apiError.message}</div>
+                            <div className="text-red-600 font-normal text-sm text-center">{form.formState.errors.apiError.data.message}</div>
                         )}
                         <button
                             type="submit"
