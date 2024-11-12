@@ -4,14 +4,12 @@ import { z } from "zod";
 import { descriptionSchema, emailSchema, nameSchema, projectSchema } from "../../lib/schemas";
 import { useSendProject } from "../../data/auth";
 
-// Définition des champs du formulaire
 const inputsFields = [
     ['text', 'Nom et Prénoms', 'name', 'Kossouvi Joseph'],
     ['email', 'Addresse email', 'email', 'exemple@exemple.com'],
     ['text', 'Titre du projet', 'project', 'Plateforme de gestion administrative, etc...']
 ];
 
-// Schéma de validation avec Zod
 const loginSchema = z.object({
     name: nameSchema,
     email: emailSchema,
@@ -19,22 +17,21 @@ const loginSchema = z.object({
     description: descriptionSchema
 });
 
-// Composant de champ de saisie individuel
 function InputField({ type, label, name, placeholder, register, error }) {
     return (
         <div className="w-full flex flex-col">
             <label className="text-sm mb-1">{label} :</label>
             <input
                 type={type}
-                placeholder={`Ex: ${placeholder}`}
-                {...register(name)}
-                className="bg-gray-50 border font-medium text-sm border-indigo-700 placeholder:text-sm placeholder:text-gray-600 pl-4 rounded-md h-10 w-full outline-none focus:ring-4"
                 aria-label={label}
+                {...register(name)}
+                placeholder={`Ex: ${placeholder}`}
+                className="bg-gray-50 border font-medium text-sm border-indigo-700 placeholder:text-sm placeholder:text-gray-600 pl-4 rounded-md h-10 w-full outline-none focus:ring-4"
             />
             <small aria-live="polite" className="text-red-600 font-normal text-sm">{error}</small>
         </div>
     );
-}
+};
 
 function Advices() {
     const form = useForm({
@@ -42,7 +39,6 @@ function Advices() {
     });
     const { postProject } = useSendProject();
 
-    // Fonction de soumission du formulaire
     const onSubmit = (data) => {
         postProject(data, {
             onSuccess: (data) => console.log(data),
@@ -79,9 +75,9 @@ function Advices() {
                                 <textarea
                                     rows="7"
                                     {...form.register('description')}
+                                    aria-label="Description du projet"
                                     placeholder="Ex: Description du projet"
                                     className="bg-gray-50 border border-purple-700 font-medium text-sm placeholder:text-sm placeholder:text-gray-600 pl-4 pt-4 rounded-md w-full outline-none focus:ring-4"
-                                    aria-label="Description du projet"
                                 ></textarea>
                                 <small className="text-red-600 font-normal text-sm">{form.formState.errors.description?.message}</small>
                             </div>
