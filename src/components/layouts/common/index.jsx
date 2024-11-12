@@ -6,9 +6,10 @@ import { RxCountdownTimer } from "react-icons/rx";
 import { RiBarChart2Fill } from "react-icons/ri";
 import { AiOutlineExclamationCircle } from "react-icons/ai";
 import { LuHome } from "react-icons/lu";
-import { GoTrophy } from "react-icons/go";
+import { GoPerson, GoTrophy } from "react-icons/go";
 import { Link, Outlet } from "react-router-dom";
 import { IoPersonOutline } from "react-icons/io5";
+import { TfiBell } from "react-icons/tfi";
 
 function CommonLayout(){
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -26,8 +27,13 @@ function CommonLayout(){
         <div className="min-h-screen bg-gray-100">
             <div>
                 <div className="lg:hidden fixed top-8 right-6 z-50 flex items-center gap-2">
-                    <div className="p-2 cursor-pointer hover:bg-gray-200 rounded-3xl">
-                        <IoPersonOutline
+                    <div className="p-1 cursor-pointer hover:bg-gray-200 rounded-3xl">
+                        <GoPerson
+                            size={ 22 }
+                        />
+                    </div>
+                    <div className="p-1 cursor-pointer hover:bg-gray-200 rounded-3xl">
+                        <TfiBell
                             size={ 22 }
                         />
                     </div>
