@@ -18,14 +18,14 @@
 
     .onBg{
         height: 100%;
-        background: #00000028;
+        background: #0000001b;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
 
         p{
-            width: 85%;
+            width: 80%;
         }
     }
 }

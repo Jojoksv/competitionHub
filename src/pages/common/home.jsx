@@ -1,27 +1,28 @@
-import { Sparkles, Target, Trophy, Users } from "lucide-react";
+import { BadgeCheck, Briefcase, Lightbulb, Network } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const features = [
-    {
-      name: 'Challenges Innovants',
-      description: 'Participez à des concours stimulants et innovants dans divers domaines.',
-      icon: Trophy,
-    },
-    {
-      name: 'Communauté Active',
-      description: 'Rejoignez une communauté dynamique de participants passionnés.',
-      icon: Users,
-    },
-    {
-      name: 'Objectifs Ambitieux',
-      description: 'Relevez des défis qui vous permettront de vous surpasser.',
-      icon: Target,
-    },
-    {
-      name: 'Récompenses Attractives',
-      description: 'Gagnez des prix exceptionnels et obtenez une reconnaissance méritée.',
-      icon: Sparkles,
-    },
+  {
+    name: 'Offres Diversifiées',
+    description: 'Accédez à des opportunités variées dans les secteurs clés en Afrique.',
+    icon: Briefcase,
+  },
+  {
+    name: 'Réseau de Contacts',
+    description: 'Connectez-vous avec des professionnels et partenaires engagés sur le continent.',
+    icon: Network,
+  },
+  {
+    name: 'Projets Inspirants',
+    description: 'Découvrez des projets innovants et transformateurs à travers toute l’Afrique.',
+    icon: Lightbulb,
+  },
+  {
+    name: 'Avantages Exclusifs',
+    description: 'Profitez d’avantages uniques et faites avancer votre carrière ou entreprise.',
+    icon: BadgeCheck,
+  },
+  
   ];
   
 
@@ -36,8 +37,7 @@ function Home(){
                 <span className="block text-indigo-600">OPPORTINUITÉS D'AFRIQUE</span>
               </h1>
               <p className="font-semibold mt-6 max-w-md mx-auto text-base text-gray-900 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
-                La plateforme de référence pour participer aux concours les plus innovants et stimulants.
-                Relevez des défis, dépassez-vous et rejoignez une communauté passionnée.
+                La plateforme incontournable pour saisir les meilleures opportunités d'Afrique. Explorez, connectez-vous et donnez vie à vos ambitions.
               </p>
               <div className="mt-8 max-w-md mx-auto sm:flex sm:justify-center sm:flex-col md:mt-8">
                 <div className="flex justify-center">
@@ -66,7 +66,7 @@ function Home(){
           <div className="py-16">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="w-full flex justify-center lg:text-5xl md:text-4xl text-3xl font-extrabold text-center">
-                <span>Nos dernières offres</span>
+                <span>Nos Objectifs</span>
               </div>
               <div className="mt-10">
                 <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
