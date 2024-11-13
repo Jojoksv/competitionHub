@@ -1,5 +1,5 @@
-import { BadgeCheck, Briefcase, Lightbulb, Network } from "lucide-react";
-import { Link } from "react-router-dom";
+import { ArrowRight, BadgeCheck, Briefcase, Calendar, Lightbulb, Network, Trophy, Users } from "lucide-react";
+import { Link, useNavigate } from "react-router-dom";
 import logo from '../../assets/images/logo.png'
 import { VscBriefcase } from "react-icons/vsc";
 import { IoLocationOutline } from "react-icons/io5";
@@ -57,8 +57,59 @@ const jobData = [
   }
 ];
 
+const challenges = [
+  {
+    id: 1,
+    title: 'Challenge Innovation Tech 2024',
+    description: "Développez une solution innovante utilisant tech pour résoudre un problème social ou au sein de l'ESMT.",
+    startDate: '2024-11-15',
+    endDate: '2024-11-15',
+    participants: 0,
+    groupes: 0,
+    prize: '0 FCA',
+    status: 'Bientôt',
+    image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80',
+  },
+  // {
+  //   id: 2,
+  //   title: 'Défi Santé et Bien-être 2024',
+  //   description: "Proposez une solution qui améliore l'accès aux soins ou la qualité de vie des patients.",
+  //   startDate: '2024-12-01',
+  //   endDate: '2024-12-15',
+  //   participants: 10,
+  //   groupes: 5,
+  //   prize: '500,000 FCA',
+  //   status: 'Ouvert',
+  //   image: 'https://fmrq.qc.ca/wp-content/uploads/2024/08/Medecins-discutent-securite-psychologique-iStock-1973842913-1024x683.jpg',
+  // },
+  // {
+  //   id: 3,
+  //   title: 'Concours Environnement Durable 2025',
+  //   description: "Créez un projet qui promeut le développement durable et réduit l'empreinte carbone.",
+  //   startDate: '2025-01-10',
+  //   endDate: '2025-01-25',
+  //   participants: 25,
+  //   groupes: 8,
+  //   prize: '1,000,000 FCA',
+  //   status: 'À venir',
+  //   image: 'https://images.unsplash.com/photo-1521334884684-d80222895322?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80',
+  // },
+  // {
+  //   id: 4,
+  //   title: 'Hackathon de Sécurité Informatique 2025',
+  //   description: "Résolvez des problèmes complexes liés à la cybersécurité et protégez les données sensibles.",
+  //   startDate: '2025-02-05',
+  //   endDate: '2025-02-07',
+  //   participants: 40,
+  //   groupes: 10,
+  //   prize: '750,000 FCA',
+  //   status: 'Bientôt',
+  //   image: 'https://medecine.umontreal.ca/wp-content/uploads/sites/68/2024/11/csm_20241104_sante-numerique-couverture_7b014c3235-768x512.jpg',
+  // }
+];
 
 function Home(){
+    const navigate = useNavigate()
     return(
         <div className="max-w-7xl mx-auto">
           {/* Hero Section */}
@@ -108,12 +159,12 @@ function Home(){
             </div>
           </div>
 
-          {/* Offers Section */}
+          {/* Opportinuties Section */}
           <div>
             <div>
               <div className="flex flex-col items-center gap-14 mb-14">
                 <div className="w-full flex justify-center">
-                  <h1 className="font-extrabold text-3xl md:text-4xl lg:text-5xl">Nos dernières offres</h1>
+                  <h1 className="font-extrabold text-3xl md:text-4xl lg:text-5xl">Nos dernières opportunités</h1>
                 </div>
                 <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-4 lg:px-0 md:px-4 px-4">
                   {jobData.map((job) => (
@@ -139,6 +190,77 @@ function Home(){
                     </div>
                   ))}
                 </div>
+                <Link to='#' className="py-3 px-6 rounded-lg text-white font-semibold button">Voir toutes les offres</Link>
+              </div>
+            </div>
+          </div>
+
+          {/* Formations Section */}
+          <div>
+            <div>
+              <div className="flex flex-col items-center gap-14 mb-14">
+                <div className="w-full flex justify-center">
+                  <h1 className="font-extrabold text-3xl md:text-4xl lg:text-5xl">Formations et Concours</h1>
+                </div>
+                <div className="grid lg:grid-cols-2 md:grid-cols-2 gap-6 lg:px-0 md:px-4 px-4">
+                  {challenges.map((challenge) => (
+                    <div
+                        key={challenge.id}
+                        className="flex bg-gray-200 p-3"
+                    >
+                        <div className="relative w-full">
+                            <img
+                                className="w-full h-full object-cover"
+                                src={challenge.image}
+                                alt={challenge.title}
+                            />
+                            <div className="absolute top-4 right-4">
+                                <span className={`px-3 py-1 rounded-full text-sm font-semibold ${
+                                challenge.status === 'En cours'
+                                    ? 'bg-green-100 text-green-800'
+                                    : 'bg-yellow-100 text-yellow-800'
+                                }`}>
+                                    {challenge.status}
+                                </span>
+                            </div>
+                        </div>
+
+                        <div className="py-3 px-6">
+                            <h3 className="text-2xl font-bold text-gray-900 mb-2">{challenge.title}</h3>
+                            <p className="text-gray-600 mb-3 font-semibold">{challenge.description}</p>
+
+                            <div className="space-y-2">
+                                <div className="flex items-center text-gray-500">
+                                    <Calendar className="h-5 w-5 mr-2" />
+                                    <span>Date limmite de proposition de projet: 25 Novembre 2024</span>
+                                    {/* <span>Du {new Date(challenge.startDate).toLocaleDateString('fr-FR')} au {new Date(challenge.endDate).toLocaleDateString('fr-FR')}</span> */}
+                                </div>
+                                <div className="flex items-center text-gray-500">
+                                    {/* <Users className="h-5 w-5 mr-2" /> */}
+                                    {/* <span>{challenge.participants} participants en {challenge.groupes} groupes</span> */}
+                                </div>
+                                <div className="flex items-center text-gray-500">
+                                    {/* <Trophy className="h-5 w-5 mr-2" /> */}
+                                    {/* <span>Prix : {challenge.prize}</span> */}
+                                </div>
+                                <div className="text-orange-500 font-semibold">
+                                  École Supérieure Multinationale des Télécommunications
+                                </div>
+                            </div>
+
+                            <div className="mt-6">
+                                <button 
+                                onClick={() => navigate('/opportinutes/advices')}
+                                className="w-full bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 flex items-center justify-center">
+                                    Proposez votre projet
+                                    <ArrowRight className="ml-2 h-4 w-4" />
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                  ))}
+                </div>
+                <Link to='#' className="py-3 px-6 rounded-lg text-white font-semibold button">Voir plus</Link>
               </div>
             </div>
           </div>

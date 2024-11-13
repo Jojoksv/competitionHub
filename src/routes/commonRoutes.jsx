@@ -26,7 +26,7 @@ const commonRoutes = [
         element: React.lazy(() => import('../pages/common/HowItWorks'))
     },
     {
-        path: 'challenges/advices',
+        path: 'opportinutes/advices',
         element: React.lazy(() => import('../pages/common/Advices'))
     }
 ];
