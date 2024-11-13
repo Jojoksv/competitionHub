@@ -52,7 +52,7 @@ function CommonLayout(){
                     setMobileMenuOpen={setMobileMenuOpen}
                 />
                 <main className="lg:pl-64">
-                    <div className="px-4 py-10 pt-36 sm:px-6 lg:px-8">
+                    <div className="py-10 pt-24 sm:px-6 lg:px-8">
                         <Outlet />
                     </div>
                 </main>

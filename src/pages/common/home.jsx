@@ -30,36 +30,38 @@ function Home(){
     return(
         <div className="max-w-7xl mx-auto">
           {/* Hero Section */}
-          <div className="text-center pb-16 px-4 sm:px-6 lg:px-8">
-            <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-              <span className="block">Bienvenue sur</span>
-              <span className="block text-indigo-600">OPPORTINUITÉS D'AFRIQUE</span>
-            </h1>
-            <p className="mt-6 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
-              La plateforme de référence pour participer aux concours les plus innovants et stimulants.
-              Relevez des défis, dépassez-vous et rejoignez une communauté passionnée.
-            </p>
-            <div className="mt-8 max-w-md mx-auto sm:flex sm:justify-center sm:flex-col md:mt-8">
-              <div className="flex justify-center">
-                <Link
-                  to="challenges"
-                  className="l flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"
-                >
-                  Découvrir 
-                </Link>
+          <div className="text-center sm:px-6 lg:px-8 first-section">
+            <div className="onBg">
+              <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+                <span className="block text-gray-100">Bienvenue sur</span>
+                <span className="block text-indigo-600">OPPORTINUITÉS D'AFRIQUE</span>
+              </h1>
+              <p className="mt-6 max-w-md mx-auto text-base text-gray-100 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
+                La plateforme de référence pour participer aux concours les plus innovants et stimulants.
+                Relevez des défis, dépassez-vous et rejoignez une communauté passionnée.
+              </p>
+              <div className="mt-8 max-w-md mx-auto sm:flex sm:justify-center sm:flex-col md:mt-8">
+                <div className="flex justify-center">
+                  <Link
+                    to="challenges"
+                    className="l flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"
+                  >
+                    Découvrir 
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
 
           {/* Featured Image */}
-          <div className="relative">
+          {/* <div className="relative">
             <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-600 opacity-10 rounded-xl"></div>
             <img
               className="relative rounded-xl shadow-2xl w-full h-96 object-cover"
               src={image}
               alt="Compétition"
             />
-          </div>
+          </div> */}
 
           {/* Features Section */}
           <div className="py-16">
