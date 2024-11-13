@@ -1,6 +1,6 @@
 import { useState } from "react";
 import NavBar from "./NavBar"
-import logo from '../../../assets/images/logo1.webp'
+import logo from '../../../assets/images/opport.png'
 import { PiSealQuestion } from "react-icons/pi";
 import { RxCountdownTimer } from "react-icons/rx";
 import { RiBarChart2Fill } from "react-icons/ri";
@@ -8,7 +8,6 @@ import { AiOutlineExclamationCircle } from "react-icons/ai";
 import { LuHome } from "react-icons/lu";
 import { GoPerson, GoTrophy } from "react-icons/go";
 import { Link, Outlet } from "react-router-dom";
-import { IoPersonOutline } from "react-icons/io5";
 import { TfiBell } from "react-icons/tfi";
 
 function CommonLayout(){
@@ -51,12 +50,11 @@ function CommonLayout(){
                     mobileMenuOpen={mobileMenuOpen}
                     setMobileMenuOpen={setMobileMenuOpen}
                 />
-                <Link to="/" className="fixed text-indigo-600 lg:text-gray-300 font-semibold top-4 left-3 lg:bottom-3 lg:top-auto z-20 flex items-center gap-1">
+                <Link to="/" className="fixed text-indigo-600 lg:text-gray-300 font-semibold top-4 left-5 lg:bottom-3 lg:top-auto z-20 flex items-center gap-1">
                     <img src={logo} alt="logo" className="h-16" />
-                    {/* <span className="font-extrabold text-2xl">Skillify</span> */}
                 </Link>
                 <main className="lg:pl-64">
-                    <div className={`px-4 py-10 pt-36 sm:px-6 lg:px-8`}>
+                    <div className="px-4 py-10 pt-36 sm:px-6 lg:px-8">
                         <Outlet />
                     </div>
                 </main>
