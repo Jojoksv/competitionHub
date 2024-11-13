@@ -225,7 +225,7 @@ function Home(){
                             </div>
                         </div>
 
-                        <div className="py-3 pl-3 w-3/5">
+                        <div className="pl-3 w-3/5">
                             <h3 className="text-2xl font-bold text-gray-900 mb-1">{challenge.title}</h3>
                             <p className="text-gray-600 mb-1 font-semibold">{challenge.description}</p>
                             <div className="space-y-1">
