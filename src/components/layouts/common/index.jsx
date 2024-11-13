@@ -15,7 +15,7 @@ function CommonLayout(){
 
     const navigation = [
         { name: 'Accueil', href: '', icon: LuHome },
-        { name: 'Challenges', href: 'challenges', icon: GoTrophy  },
+        { name: 'Opportinutés', href: 'opportinutes', icon: GoTrophy  },
         { name: 'Comment ça marche', href: 'howItWorks', icon: PiSealQuestion  },
         { name: 'Éditions passées', href: 'pastEditions', icon: RxCountdownTimer  },
         { name: 'Classement', href: 'ranking', icon: RiBarChart2Fill  },

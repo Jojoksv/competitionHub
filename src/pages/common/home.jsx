@@ -52,16 +52,6 @@ function Home(){
             </div>
           </div>
 
-          {/* Featured Image */}
-          {/* <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-600 opacity-10 rounded-xl"></div>
-            <img
-              className="relative rounded-xl shadow-2xl w-full h-96 object-cover"
-              src={image}
-              alt="Compétition"
-            />
-          </div> */}
-
           {/* Features Section */}
           <div className="py-16">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
