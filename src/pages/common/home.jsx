@@ -206,9 +206,9 @@ function Home(){
                   {challenges.map((challenge) => (
                     <div
                         key={challenge.id}
-                        className="flex bg-gray-200 p-3"
+                        className="flex bg-gray-200 p-2"
                     >
-                        <div className="relative w-full">
+                        <div className="relative w-2/5">
                             <img
                                 className="w-full h-full object-cover"
                                 src={challenge.image}
@@ -225,7 +225,7 @@ function Home(){
                             </div>
                         </div>
 
-                        <div className="py-3 px-6">
+                        <div className="py-3 pl-3 w-3/5">
                             <h3 className="text-2xl font-bold text-gray-900 mb-2">{challenge.title}</h3>
                             <p className="text-gray-600 mb-3 font-semibold">{challenge.description}</p>
 
