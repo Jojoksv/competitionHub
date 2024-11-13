@@ -1,5 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
-
+import logo from '../../../assets/images/opport.png'
+import { GoPerson } from "react-icons/go";
 
 function NavBar(props){
     const {
@@ -39,17 +40,24 @@ function NavBar(props){
             </div>
 
             {/* Mobile Menu */}
-            <div className="lg:hidden bg-white fixed z-10 w-screen h-24 shadow-sm border">
+            <div>
                 <div
                     className={`${
-                    mobileMenuOpen ? 'block z-20' : 'hidden'
-                    } fixed top-16 right-6 bg-gray-100 bg-white rounded-md cursor-pointer lg:hidden`}
+                    mobileMenuOpen ? 'translate-x-0' : '-translate-x-full'
+                    } w-4/5 fixed z-50 inset-0 bg-zinc-900 rounded-md cursor-pointer lg:hidden transition-transform duration-300 ease-in-out`}
                 >
-                    <div className="flex items-center justify-center h-14">
-                        <Link to='/' onClick={() => setMobileMenuOpen(false)} className="text-lg font-bold text-indigo-600">CompetitionHub</Link>
+                    <div className="flex items-center justify-between h-20 bg-white border">
+                        <Link to='/' onClick={() => setMobileMenuOpen(false)} className="text-lg font-bold text-indigo-600">
+                            <div className="fixed text-indigo-600 lg:text-gray-300 font-semibold top-3 left-2 lg:bottom-3 lg:top-auto z-20 flex items-center gap-1">
+                                <img src={logo} alt="logo" className="h-14" />
+                            </div>
+                            <div className="fixed p-1 cursor-pointer hover:bg-gray-200 rounded-3xl z-20 right-4 top-6">
+                                <GoPerson size={26} color="#000"/>
+                            </div>
+                        </Link>
                     </div>
-                    <div className="flex flex-col flex-grow border-t py-2">
-                        <nav className="flex-1 px-2 space-y-1">
+                    <div className="flex flex-col flex-grow border-t py-4">
+                        <nav className="flex-1 px-2 space-y-2">
                             {navigation.map((item) => (
                                 <NavLink
                                     end
@@ -58,11 +66,11 @@ function NavBar(props){
                                     onClick={() => setMobileMenuOpen(false)}
                                     className={({ isActive }) => 
                                         `${isActive
-                                        ? 'bg-gray-200 text-indigo-600'
-                                        : 'text-gray-300 hover:bg-gray-300 hover:text-gray-800'
-                                    }  group flex items-center px-2 py-1.5 text-sm font-medium rounded-md w-full`}
+                                        ? 'bg-gray-800 text-white'
+                                        : 'text-gray-300 hover:bg-gray-500'
+                                    }  group flex items-center px-2 py-3 text-sm font-normal rounded-md w-full`}
                                 >
-                                    <item.icon className='mr-1 h-4 w-4' />
+                                    <item.icon className='mr-2 h-4 w-4' />
                                     {item.name}
                                 </NavLink>
                             ))}

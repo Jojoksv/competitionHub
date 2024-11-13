@@ -25,34 +25,32 @@ function CommonLayout(){
     return(
         <div className="min-h-screen bg-gray-100">
             <div>
-                <div className="lg:hidden fixed top-8 right-3 z-50 flex items-center gap-3">
-                    <div className="p-1 cursor-pointer hover:bg-gray-200 rounded-3xl">
-                        <GoPerson
-                            size={ 26 }
-                        />
+                <div className="lg:hidden bg-white fixed z-10 w-screen h-24 shadow-sm border">
+                    <div className="lg:hidden fixed top-8 right-3 z-20 flex items-center gap-3">
+                        <div className="p-1 cursor-pointer hover:bg-gray-200 rounded-3xl">
+                            <GoPerson size={26}/>
+                        </div>
+                        <div className="p-1 cursor-pointer hover:bg-gray-200 rounded-3xl">
+                            <TfiBell size={24} />
+                        </div>
+                        <div
+                            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                            className={`rounded-md bg-white cursor-pointer ${mobileMenuOpen ? 'menuOpen' : 'menuClosed'} menu`}
+                        >
+                            <div className="barre1"></div>
+                            <div className="barre2"></div>
+                            <div className="barre3"></div>
+                        </div>
                     </div>
-                    <div className="p-1 cursor-pointer hover:bg-gray-200 rounded-3xl">
-                        <TfiBell
-                            size={ 24 }
-                        />
-                    </div>
-                    <div
-                        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                        className={`rounded-md bg-white cursor-pointer ${mobileMenuOpen ? 'menuOpen' : 'menuClosed'} menu`}
-                    >
-                        <div className="barre1"></div>
-                        <div className="barre2"></div>
-                        <div className="barre3"></div>
-                    </div>
+                    <Link to="/" className="fixed text-indigo-600 lg:text-gray-300 font-semibold top-4 left-5 lg:bottom-3 lg:top-auto z-20 flex items-center gap-1">
+                        <img src={logo} alt="logo" className="h-16" />
+                    </Link>
                 </div>
                 <NavBar
                     navigation={navigation}
                     mobileMenuOpen={mobileMenuOpen}
                     setMobileMenuOpen={setMobileMenuOpen}
                 />
-                <Link to="/" className="fixed text-indigo-600 lg:text-gray-300 font-semibold top-2 left-5 lg:bottom-3 lg:top-auto z-20 flex items-center gap-1">
-                    <img src={logo} alt="logo" className="h-20" />
-                </Link>
                 <main className="lg:pl-64">
                     <div className="px-4 py-10 pt-36 sm:px-6 lg:px-8">
                         <Outlet />
