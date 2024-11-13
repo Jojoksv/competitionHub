@@ -1,6 +1,5 @@
 import { Sparkles, Target, Trophy, Users } from "lucide-react";
 import { Link } from "react-router-dom";
-import image from '../../assets/images/image.png'
 
 const features = [
     {
@@ -30,7 +29,7 @@ function Home(){
     return(
         <div className="max-w-7xl mx-auto">
           {/* Hero Section */}
-          <div className="text-center sm:px-6 lg:px-8 first-section">
+          <div className="text-center first-section">
             <div className="onBg">
               <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
                 <span className="block text-gray-100">Bienvenue sur</span>
@@ -66,7 +65,7 @@ function Home(){
           {/* Features Section */}
           <div className="py-16">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div>
+              <div className="w-full flex justify-center lg:text-5xl md:text-4xl text-3xl font-extrabold text-center">
                 <span>Nos dernières offres</span>
               </div>
               <div className="mt-10">
