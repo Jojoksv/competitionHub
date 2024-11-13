@@ -164,7 +164,7 @@ function Home(){
             <div>
               <div className="flex flex-col items-center gap-14 mb-14">
                 <div className="w-full flex justify-center">
-                  <h1 className="font-extrabold text-3xl md:text-4xl lg:text-5xl">Nos dernières opportunités</h1>
+                  <h1 className="font-extrabold text-3xl text-center md:text-4xl lg:text-5xl">Nos dernières opportunités</h1>
                 </div>
                 <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-4 lg:px-0 md:px-4 px-4">
                   {jobData.map((job) => (
@@ -200,7 +200,7 @@ function Home(){
             <div>
               <div className="flex flex-col items-center gap-14 mb-14">
                 <div className="w-full flex justify-center">
-                  <h1 className="font-extrabold text-3xl md:text-4xl lg:text-5xl">Formations et Concours</h1>
+                  <h1 className="font-extrabold text-3xl text-center md:text-4xl lg:text-5xl">Formations et Concours</h1>
                 </div>
                 <div className="grid lg:grid-cols-2 md:grid-cols-2 gap-6 lg:px-0 md:px-4 px-4">
                   {challenges.map((challenge) => (
