@@ -206,7 +206,7 @@ function Home(){
                   {challenges.map((challenge) => (
                     <div
                         key={challenge.id}
-                        className="flex bg-gray-200 p-2"
+                        className="flex bg-gray-200 p-2 border border-blue-200"
                     >
                         <div className="relative w-2/5">
                             <img
