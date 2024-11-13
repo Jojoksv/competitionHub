@@ -250,9 +250,8 @@ function Home(){
                             <div className="mt-6">
                                 <button 
                                 onClick={() => navigate('/opportinutes/advices')}
-                                className="w-full bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 flex items-center justify-center">
+                                className="w-full bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 flex items-center justify-center md:text-md sm:text-md text-sm font-semibold">
                                     Proposez votre projet
-                                    <ArrowRight className="ml-2 h-4 w-4" />
                                 </button>
                             </div>
                         </div>
