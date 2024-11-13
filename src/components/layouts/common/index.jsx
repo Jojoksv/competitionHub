@@ -50,8 +50,8 @@ function CommonLayout(){
                     mobileMenuOpen={mobileMenuOpen}
                     setMobileMenuOpen={setMobileMenuOpen}
                 />
-                <Link to="/" className="fixed text-indigo-600 lg:text-gray-300 font-semibold top-4 left-5 lg:bottom-3 lg:top-auto z-20 flex items-center gap-1">
-                    <img src={logo} alt="logo" className="h-16" />
+                <Link to="/" className="fixed text-indigo-600 lg:text-gray-300 font-semibold top-2 left-5 lg:bottom-3 lg:top-auto z-20 flex items-center gap-1">
+                    <img src={logo} alt="logo" className="h-20" />
                 </Link>
                 <main className="lg:pl-64">
                     <div className="px-4 py-10 pt-36 sm:px-6 lg:px-8">

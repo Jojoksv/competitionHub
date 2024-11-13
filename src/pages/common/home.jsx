@@ -39,13 +39,13 @@ function Home(){
               La plateforme de référence pour participer aux concours les plus innovants et stimulants.
               Relevez des défis, dépassez-vous et rejoignez une communauté passionnée.
             </p>
-            <div className="mt-8 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
-              <div className="rounded-md shadow">
+            <div className="mt-8 max-w-md mx-auto sm:flex sm:justify-center sm:flex-col md:mt-8">
+              <div className="flex justify-center">
                 <Link
                   to="challenges"
-                  className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"
+                  className="l flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"
                 >
-                  Découvrir les challenges
+                  Découvrir 
                 </Link>
               </div>
             </div>

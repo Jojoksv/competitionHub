@@ -39,7 +39,7 @@ function NavBar(props){
             </div>
 
             {/* Mobile Menu */}
-            <div className="bg-white fixed z-10 w-screen h-24 shadow-sm border">
+            <div className="lg:hidden bg-white fixed z-10 w-screen h-24 shadow-sm border">
                 <div
                     className={`${
                     mobileMenuOpen ? 'block z-20' : 'hidden'
