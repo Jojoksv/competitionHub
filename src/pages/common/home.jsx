@@ -42,7 +42,7 @@ const jobData = [
     title: "CHARGEE DE COMMUNICATION",
     organization: "Organisation des Nations Unies",
     field: "Communication, Journaliste",
-    location: "ONU, Sénégal, Afrique de l'Ouest",
+    location: "ONU, Burkina FAso, Afrique de l'Ouest",
     deadline: "12 Decembre 2024",
     logo: logo,
   },
