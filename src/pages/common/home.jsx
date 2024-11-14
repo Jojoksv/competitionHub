@@ -116,17 +116,17 @@ function Home(){
           <div className="text-center first-section">
             <div className="onBg">
               <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-                <span className="block text-gray-900">Bienvenue sur</span>
+                <span className="block text-gray-100">Bienvenue sur</span>
                 <span className="block text-indigo-600">OPPORTINUITÉS D'AFRIQUE</span>
               </h1>
-              <p className="font-semibold mt-6 max-w-md mx-auto text-base text-gray-900 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
+              <p className="font-semibold mt-6 max-w-md mx-auto text-base text-gray-100 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
                 La plateforme incontournable pour saisir les meilleures opportunités d'Afrique. Explorez, connectez-vous et donnez vie à vos ambitions.
               </p>
               <div className="mt-8 max-w-md mx-auto sm:flex sm:justify-center sm:flex-col md:mt-8">
                 <div className="flex justify-center">
                   <Link
                     to="opportinutes"
-                    className="l flex items-center justify-center px-8 py-3 border text-base font-medium rounded-md text-white hover:bg-indigo-700 md:py-4 md:text-lg md:px-10 button"
+                    className="flex items-center justify-center px-8 py-3 text-base font-medium rounded-md text-white hover:bg-indigo-700 md:py-4 md:text-lg md:px-10 button"
                   >
                     Découvrir 
                   </Link>
@@ -190,7 +190,7 @@ function Home(){
                     </div>
                   ))}
                 </div>
-                <Link to='#' className="py-3 px-6 rounded-lg text-white font-semibold button">Voir toutes les offres</Link>
+                <Link to='#' className="py-3 px-6 rounded-lg text-white font-semibold bg-indigo-600">Voir toutes les offres</Link>
               </div>
             </div>
           </div>
@@ -248,7 +248,7 @@ function Home(){
                             </div>
 
                             <div className="mt-3">
-                                <button 
+                                <button
                                 onClick={() => navigate('/opportinutes/advices')}
                                 className="w-full bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 flex items-center justify-center md:text-md sm:text-md text-sm font-semibold">
                                     Proposez votre projet
@@ -258,7 +258,7 @@ function Home(){
                     </div>
                   ))}
                 </div>
-                <Link to='#' className="py-3 px-6 rounded-lg text-white font-semibold button">Voir plus</Link>
+                <Link to='#' className="py-3 px-6 rounded-lg text-white font-semibold bg-indigo-600 ">Voir plus</Link>
               </div>
             </div>
           </div>
