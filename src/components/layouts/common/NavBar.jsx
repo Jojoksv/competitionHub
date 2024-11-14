@@ -12,10 +12,10 @@ function NavBar(props){
     return(
         <>
             {/* Desktop sidebar */}
-            <div className="hidden lg:fixed lg:inset-y-0 lg:flex lg:w-64 lg:flex-col">
+            <div className="hidden lg:fixed lg:inset-y-0 lg:flex lg:w-60 lg:flex-col">
                 <div className="flex flex-col flex-grow bg-blue-800">
-                    <div className="flex items-center justify-center h-20">
-                        <span className="text-2xl font-bold text-gray-50">CompetitionHub</span>
+                    <div className="flex items-center justify-center h-24 bg-white">
+                    <img src={logo} alt="logo" className="h-16" />
                     </div>
                     <div className="flex flex-col flex-grow border-t pt-10">
                         <nav className="flex-1 px-3 space-y-2">

@@ -51,7 +51,7 @@ function CommonLayout(){
                     mobileMenuOpen={mobileMenuOpen}
                     setMobileMenuOpen={setMobileMenuOpen}
                 />
-                <main className="lg:pl-64">
+                <main className="lg:pl-60">
                     <div className="py-10 pt-24 sm:px-6">
                         <Outlet />
                     </div>

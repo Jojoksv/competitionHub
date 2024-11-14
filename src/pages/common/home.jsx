@@ -206,7 +206,7 @@ function Home(){
                   {challenges.map((challenge) => (
                     <div
                         key={challenge.id}
-                        className="flex bg-gray-200 p-2 border border-blue-200"
+                        className="flex bg-gray-200 p-2 border"
                     >
                         <div className="relative w-2/5">
                             <img
@@ -224,7 +224,6 @@ function Home(){
                                 </span>
                             </div>
                         </div>
-
                         <div className="pl-3 w-3/5">
                             <h3 className="text-2xl font-bold text-gray-900 mb-1">{challenge.title}</h3>
                             <p className="text-gray-600 mb-1 font-semibold">{challenge.description}</p>
@@ -242,11 +241,10 @@ function Home(){
                                     {/* <Trophy className="h-5 w-5 mr-2" /> */}
                                     {/* <span>Prix : {challenge.prize}</span> */}
                                 </div>
-                                <div className="text-orange-500 font-semibold">
+                                <div className="text-blue-500 font-semibold">
                                   École Supérieure Multinationale des Télécommunications
                                 </div>
                             </div>
-
                             <div className="mt-3">
                                 <button
                                 onClick={() => navigate('/opportinutes/advices')}
