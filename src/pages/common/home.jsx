@@ -3,6 +3,8 @@ import { Link, useNavigate } from "react-router-dom";
 import logo from '../../assets/images/logo.png'
 import { VscBriefcase } from "react-icons/vsc";
 import { IoLocationOutline } from "react-icons/io5";
+import { GoLocation } from "react-icons/go";
+import image from '../../assets/images/innov.avif'
 
 const features = [
   {
@@ -62,50 +64,42 @@ const challenges = [
     id: 1,
     title: 'Challenge Innovation Tech 2024',
     description: "Développez une solution innovante utilisant tech pour résoudre un problème social ou au sein de l'ESMT.",
-    startDate: '2024-11-15',
-    endDate: '2024-11-15',
-    participants: 0,
-    groupes: 0,
-    prize: '0 FCA',
-    status: 'Bientôt',
-    image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80',
+    owner: 'École Supérieure Multinationale des Télécommunications',
+    country: 'Burkina Faso',
+    city: 'Ouagadougou',
+    endDate: '2024-11-30',
+    image: image,
   },
-  // {
-  //   id: 2,
-  //   title: 'Défi Santé et Bien-être 2024',
-  //   description: "Proposez une solution qui améliore l'accès aux soins ou la qualité de vie des patients.",
-  //   startDate: '2024-12-01',
-  //   endDate: '2024-12-15',
-  //   participants: 10,
-  //   groupes: 5,
-  //   prize: '500,000 FCA',
-  //   status: 'Ouvert',
-  //   image: 'https://fmrq.qc.ca/wp-content/uploads/2024/08/Medecins-discutent-securite-psychologique-iStock-1973842913-1024x683.jpg',
-  // },
-  // {
-  //   id: 3,
-  //   title: 'Concours Environnement Durable 2025',
-  //   description: "Créez un projet qui promeut le développement durable et réduit l'empreinte carbone.",
-  //   startDate: '2025-01-10',
-  //   endDate: '2025-01-25',
-  //   participants: 25,
-  //   groupes: 8,
-  //   prize: '1,000,000 FCA',
-  //   status: 'À venir',
-  //   image: 'https://images.unsplash.com/photo-1521334884684-d80222895322?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80',
-  // },
-  // {
-  //   id: 4,
-  //   title: 'Hackathon de Sécurité Informatique 2025',
-  //   description: "Résolvez des problèmes complexes liés à la cybersécurité et protégez les données sensibles.",
-  //   startDate: '2025-02-05',
-  //   endDate: '2025-02-07',
-  //   participants: 40,
-  //   groupes: 10,
-  //   prize: '750,000 FCA',
-  //   status: 'Bientôt',
-  //   image: 'https://medecine.umontreal.ca/wp-content/uploads/sites/68/2024/11/csm_20241104_sante-numerique-couverture_7b014c3235-768x512.jpg',
-  // }
+  {
+    id: 2,
+    title: 'Défi Santé et Bien-être 2024',
+    description: "Proposez une solution qui améliore l'accès aux soins ou la qualité de vie des patients.",
+    owner: 'Ministère de la Santé',
+    country: 'Burkina Faso',
+    city: 'Ouagadougou',
+    endDate: '2024-12-15',
+    image: 'https://fmrq.qc.ca/wp-content/uploads/2024/08/Medecins-discutent-securite-psychologique-iStock-1973842913-1024x683.jpg',
+  },
+  {
+    id: 3,
+    title: 'Concours Environnement Durable 2025',
+    description: "Créez un projet qui promeut le développement durable et réduit l'empreinte carbone.",
+    owner: 'Organisation Internationale pour l’Environnement',
+    country: 'Burkina Faso',
+    city: 'Bobo-Dioulasso',
+    endDate: '2025-01-25',
+    image: 'https://images.unsplash.com/photo-1521334884684-d80222895322?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80',
+  },
+  {
+    id: 4,
+    title: 'Hackathon de Sécurité Informatique 2025',
+    description: "Résolvez des problèmes complexes liés à la cybersécurité et protégez les données sensibles.",
+    owner: 'Institut National de Cybersécurité',
+    country: 'Burkina Faso',
+    city: 'Ouagadougou',
+    endDate: '2025-02-07',
+    image: 'https://medecine.umontreal.ca/wp-content/uploads/sites/68/2024/11/csm_20241104_sante-numerique-couverture_7b014c3235-768x512.jpg',
+  },
 ];
 
 function Home(){
@@ -146,7 +140,7 @@ function Home(){
                   {features.map((feature) => (
                     <div key={feature.name} className="relative">
                       <dt>
-                        <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                        <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-600 text-white">
                           <feature.icon className="h-6 w-6" aria-hidden="true" />
                         </div>
                         <p className="ml-16 text-lg leading-6 font-medium text-gray-900">{feature.name}</p>
@@ -204,55 +198,28 @@ function Home(){
                 </div>
                 <div className="grid lg:grid-cols-2 md:grid-cols-2 gap-6 lg:px-0 md:px-4 px-4">
                   {challenges.map((challenge) => (
-                    <div
-                        key={challenge.id}
-                        className="flex bg-gray-200 p-2 border"
-                    >
-                        <div className="relative w-2/5">
-                            <img
-                                className="w-full h-full object-cover"
-                                src={challenge.image}
-                                alt={challenge.title}
-                            />
-                            <div className="absolute top-4 right-4">
-                                <span className={`px-3 py-1 rounded-full text-sm font-semibold ${
-                                challenge.status === 'En cours'
-                                    ? 'bg-green-100 text-green-800'
-                                    : 'bg-yellow-100 text-yellow-800'
-                                }`}>
-                                    {challenge.status}
-                                </span>
+                    <div key={challenge.id} className="shadow-md">
+                      <div className='bg-white flex flex-col items-center'>
+                        <div className="bg-indigo-700 w-full flex justify-center">
+                            <h1 className="flex items-center text-center h-16 text-white font-bold text-xl px-3">{challenge.owner}</h1>
+                        </div>
+                        <div className="py-4 px-6">
+                            <div
+                                className="h-32 bg-cover bg-center"
+                                style={{ backgroundImage: `url(${challenge.image})` }}
+                            ></div>
+                            <div className='grid grid-cols-2 gap-4 font-semibold text-gray-500 gap-1 text-md mt-1'>
+                                <span className='py-1.5 text-center flex items-center gap-1'><GoLocation />{challenge.city}</span>
+                                <span className='py-1.5 text-center flex items-center gap-1'><GoLocation />{challenge.country}</span>
+                            </div>
+                            <div className='flex flex-col gap-1 mt-1'>
+                                <h1 className='text-mg text-gray-500 font-bold'>{challenge.title}</h1>
+                                <span className='font-semibold text-xl'>{challenge.description}</span>
+                                <span className='font-semibold text-gray-500'>Date de fin: <b className='text-base'>{challenge.endDate}</b></span>
                             </div>
                         </div>
-                        <div className="pl-3 w-3/5">
-                            <h3 className="text-2xl font-bold text-gray-900 mb-1">{challenge.title}</h3>
-                            <p className="text-gray-600 mb-1 font-semibold">{challenge.description}</p>
-                            <div className="space-y-1">
-                                <div className="flex items-center text-gray-500">
-                                    <Calendar className="h-5 w-5 mr-2" />
-                                    <span>Date limmite de proposition de projet: 25 Novembre 2024</span>
-                                    {/* <span>Du {new Date(challenge.startDate).toLocaleDateString('fr-FR')} au {new Date(challenge.endDate).toLocaleDateString('fr-FR')}</span> */}
-                                </div>
-                                <div className="flex items-center text-gray-500">
-                                    {/* <Users className="h-5 w-5 mr-2" /> */}
-                                    {/* <span>{challenge.participants} participants en {challenge.groupes} groupes</span> */}
-                                </div>
-                                <div className="flex items-center text-gray-500">
-                                    {/* <Trophy className="h-5 w-5 mr-2" /> */}
-                                    {/* <span>Prix : {challenge.prize}</span> */}
-                                </div>
-                                <div className="text-blue-500 font-semibold">
-                                  École Supérieure Multinationale des Télécommunications
-                                </div>
-                            </div>
-                            <div className="mt-3">
-                                <button
-                                onClick={() => navigate('/opportinutes/advices')}
-                                className="w-full bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 flex items-center justify-center md:text-md sm:text-md text-sm font-semibold">
-                                    Proposez votre projet
-                                </button>
-                            </div>
-                        </div>
+                        <button className='underline text-lg py-2 px-6 mb-4'>Postuler maintenant</button>
+                      </div>
                     </div>
                   ))}
                 </div>

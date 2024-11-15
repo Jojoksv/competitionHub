@@ -25,7 +25,7 @@ function Challenges(){
                 {challenges.map((challenge) => (
                     <div key={challenge.id} className="shadow-md">
                         <div className='bg-white flex flex-col items-center'>
-                            <div className="bg-indigo-700">
+                            <div className="bg-indigo-700 w-full flex justify-center">
                                 <h1 className="flex items-center text-center h-16 text-white font-bold text-xl px-3">{challenge.owner}</h1>
                             </div>
                             <div className="py-4 px-6">
