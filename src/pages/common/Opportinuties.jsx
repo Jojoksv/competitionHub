@@ -1,5 +1,5 @@
-import { ArrowRight, Calendar, Trophy, Users } from "lucide-react";
-import { IoLocationOutline } from "react-icons/io5";
+import { GoLocation } from 'react-icons/go';
+import image from '../../assets/images/innov.avif'
 
 const challenges = [
     {
@@ -9,13 +9,8 @@ const challenges = [
       owner: 'École Supérieure Multinationale des Télécommunications',
       country: 'Burkina Faso',
       city: 'Ouagadougou',
-      startDate: '2024-11-15',
-      endDate: '2024-11-15',
-      participants: 0,
-      groupes: 0,
-      prize: '0 FCA',
-      status: 'Bientôt',
-      image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80',
+      endDate: '2024-11-30',
+      image: image,
     }
   ];
 
@@ -26,23 +21,29 @@ function Challenges(){
                 <h1 className="text-4xl font-bold text-gray-900 sm:text-5xl">Nos Opportinutés</h1>
             </div>
 
-            <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-2 px-10">
+            <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-2 px-4">
                 {challenges.map((challenge) => (
-                    <div
-                        key={challenge.id}
-                        className="flex flex-col items-center bg-blue-100 py-6 px-4 shadow-md"
-                    >
-                        <div className="w-full flex flex-col items-center">
-                            <img src={challenge.image} alt="ESMT Project" className="w-20 h-20 rounded-lg" />
-                            <h1 className="font-semibold mt-2 text-lg">{challenge.title}</h1>
-                            <span className="font-semibold text-gray-500 text-center">{challenge.description}</span>
-                        </div>
-                        <div className="flex flex-wrap mt-4 gap-2 text-gray-500 font-semibold">
-                            <span className="border border-gray-400 text-center rounded-3xl py-1 px-4 m-auto">{challenge.owner}</span>
-                            <span className="border border-gray-400 text-center rounded-3xl py-1 px-4 m-auto flex items-center gap-1"><IoLocationOutline />{challenge.country}</span>
-                            <span className="border border-gray-400 text-center rounded-3xl py-1 px-4 m-auto flex items-center gap-1"><IoLocationOutline />{challenge.city}</span>
-                            <span className="border border-gray-400 text-center rounded-3xl py-1 px-4 m-auto">Date début: {challenge.startDate}</span>
-                            <span className="border border-gray-400 text-center rounded-3xl py-1 px-4 m-auto">Date fin: {challenge.endDate}</span>
+                    <div key={challenge.id} className="shadow-md">
+                        <div className='bg-white flex flex-col items-center'>
+                            <div className="bg-indigo-700">
+                                <h1 className="flex items-center text-center h-16 text-white font-bold text-xl px-3">{challenge.owner}</h1>
+                            </div>
+                            <div className="py-4 px-6">
+                                <div
+                                    className="h-32 bg-cover bg-center"
+                                    style={{ backgroundImage: `url(${challenge.image})` }}
+                                ></div>
+                                <div className='grid grid-cols-2 gap-4 font-semibold text-gray-500 gap-1 text-md mt-1'>
+                                    <span className='py-1.5 text-center flex items-center gap-1'><GoLocation />{challenge.city}</span>
+                                    <span className='py-1.5 text-center flex items-center gap-1'><GoLocation />{challenge.country}</span>
+                                </div>
+                                <div className='flex flex-col gap-1 mt-1'>
+                                    <h1 className='text-mg text-gray-500 font-bold'>{challenge.title}</h1>
+                                    <span className='font-semibold text-xl'>{challenge.description}</span>
+                                    <span className='font-semibold text-gray-500'>Date de fin: <b className='text-base'>{challenge.endDate}</b></span>
+                                </div>
+                            </div>
+                            <button className='underline text-lg py-2 px-6 mb-4'>Postuler maintenant</button>
                         </div>
                     </div>
                 ))}
