@@ -196,7 +196,7 @@ function Home(){
                 <div className="w-full flex justify-center">
                   <h1 className="font-extrabold text-3xl text-center md:text-4xl lg:text-5xl">Formations et Concours</h1>
                 </div>
-                <div className="grid lg:grid-cols-2 md:grid-cols-2 gap-6 lg:px-0 md:px-4 px-4">
+                <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-6 lg:px-0 md:px-4 px-4">
                   {challenges.map((challenge) => (
                     <div key={challenge.id} className="shadow-md">
                       <div className='bg-white flex flex-col items-center'>
