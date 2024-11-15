@@ -111,7 +111,7 @@ function Home(){
             <div className="onBg">
               <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
                 <span className="block text-gray-100">Bienvenue sur</span>
-                <span className="block text-indigo-500">OPPORTUNITÉS D'AFRIQUE</span>
+                <span className="block text-indigo-100">OPPORTUNITÉS D'AFRIQUE</span>
               </h1>
               <p className="font-semibold mt-6 max-w-md mx-auto text-base text-gray-100 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
                 La plateforme incontournable pour saisir les meilleures opportunités d'Afrique. Explorez, connectez-vous et donnez vie à vos ambitions.
