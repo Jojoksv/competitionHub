@@ -13,8 +13,8 @@ const inputsFields = [
 const loginSchema = z.object({
     name: nameSchema,
     email: emailSchema,
-    project: projectSchema,
-    description: descriptionSchema
+    // project: projectSchema,
+    // description: descriptionSchema
 });
 
 function InputField({ type, label, name, placeholder, register, error }) {
@@ -41,7 +41,7 @@ function Advices() {
 
     const onSubmit = (data) => {
         postProject(data, {
-            onSuccess: (data) => console.log(data),
+            onSuccess: (data) => alert(JSON.stringify(data.message)),
             onError: (error) => form.setError("apiError", { message: error.response.message })
         });
     };
