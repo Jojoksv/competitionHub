@@ -7,7 +7,7 @@ import { useSendProject } from "../../data/auth";
 const inputsFields = [
     ['text', 'Nom et Prénoms', 'name', 'Kossouvi Joseph'],
     ['email', 'Addresse email', 'email', 'exemple@exemple.com'],
-    ['text', 'Titre du projet', 'project', 'Plateforme de gestion administrative, etc...']
+    // ['text', 'Titre du projet', 'project', 'Plateforme de gestion administrative, etc...']
 ];
 
 const loginSchema = z.object({
@@ -70,7 +70,7 @@ function Advices() {
                                     error={form.formState.errors[name]?.message}
                                 />
                             ))}
-                            <div className="w-full flex flex-col">
+                            {/* <div className="w-full flex flex-col">
                                 <label className="text-sm pb-1">Description du projet :</label>
                                 <textarea
                                     rows="7"
@@ -80,7 +80,7 @@ function Advices() {
                                     className="bg-gray-50 border border-purple-700 font-medium text-sm placeholder:text-sm placeholder:text-gray-600 pl-4 pt-4 rounded-md w-full outline-none focus:ring-4"
                                 ></textarea>
                                 <small className="text-red-600 font-normal text-sm">{form.formState.errors.description?.message}</small>
-                            </div>
+                            </div> */}
                         </div>
                         {form.formState.errors.apiError && (
                             <div className="text-red-600 font-normal text-sm text-center">{form.formState.errors.apiError.data.message}</div>
