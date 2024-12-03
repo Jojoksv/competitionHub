@@ -42,7 +42,7 @@ function Advices() {
     const onSubmit = (data) => {
         postProject(data, {
             onSuccess: (data) => alert(JSON.stringify(data.message)),
-            onError: (error) => form.setError("apiError", { message: error.response.message })
+            onError: (error) => form.setError("apiError", { message: error })
         });
     };
 
