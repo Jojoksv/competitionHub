@@ -1,5 +1,6 @@
 import { GoLocation } from 'react-icons/go';
 import image from '../../assets/images/innov.avif'
+import { useNavigate } from 'react-router-dom';
 
 const challenges = [
     {
@@ -15,6 +16,7 @@ const challenges = [
   ];
 
 function Challenges(){
+    const navigate = useNavigate();
     return(
         <div className="max-w-7xl mx-auto">
             <div className="text-center my-12">
@@ -43,7 +45,10 @@ function Challenges(){
                                     <span className='font-semibold text-gray-500'>Date de fin: <b className='text-base'>{challenge.endDate}</b></span>
                                 </div>
                             </div>
-                            <button className='underline text-lg py-2 px-6 mb-4'>Postuler maintenant</button>
+                            <button
+                                onClick={() => navigate('/opportinutes/advices')}
+                                className='underline text-lg py-2 px-6 mb-4'
+                            >Postuler maintenant</button>
                         </div>
                     </div>
                 ))}

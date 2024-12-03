@@ -69,6 +69,7 @@ const challenges = [
     city: 'Ouagadougou',
     endDate: '2024-11-30',
     image: image,
+    link: '/opportinutes/advices'
   },
   {
     id: 2,
@@ -218,7 +219,9 @@ function Home(){
                                 <span className='font-semibold text-gray-500'>Date de fin: <b className='text-base'>{challenge.endDate}</b></span>
                             </div>
                         </div>
-                        <button className='underline text-lg py-2 px-6 mb-4'>Postuler maintenant</button>
+                        <button
+                          onClick={() => navigate(challenge.link)}
+                          className='underline text-lg py-2 px-6 mb-4'>Postuler maintenant</button>
                       </div>
                     </div>
                   ))}
