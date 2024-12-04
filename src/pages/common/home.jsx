@@ -4,7 +4,7 @@ import logo from '../../assets/images/logo.png'
 import { VscBriefcase } from "react-icons/vsc";
 import { IoLocationOutline } from "react-icons/io5";
 import { GoLocation } from "react-icons/go";
-import image from '../../assets/images/innov.avif'
+import image from '../../assets/images/innov.avif';
 
 const features = [
   {

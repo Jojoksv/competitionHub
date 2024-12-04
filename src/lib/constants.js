@@ -4,7 +4,7 @@ import axios from "axios";
 const config = {
     Title: 'Competition-hub',
     // API devient dynamique en fonction de l'environnement
-    API: process.env.REACT_APP_ENV === 'PROD' ? process.env.REACT_APP_API_URL : '/api', 
+    API: import.meta.env.VITE_REACT_APP_ENV === 'PROD' ? import.meta.env.VITE_REACT_APP_API_URL : '/api', 
     authAPI: '/project'
 };
 
