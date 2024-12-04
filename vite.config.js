@@ -7,7 +7,7 @@ export default defineConfig({
 
   server: {
     port: 5174,
-    proxy: import.meta.env.VITE_REACT_APP_ENV === "DEV" 
+    proxy: process.env.VITE_REACT_APP_ENV === "DEV" 
       ? {
           "/api": {
             target: "http://localhost:8000",
