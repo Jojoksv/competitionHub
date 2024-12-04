@@ -1,10 +1,13 @@
 import axios from "axios";
 
+const ENV = import.meta.env.VITE_REACT_APP_ENV;
+const URL = import.meta.env.VITE_REACT_APP_API_URL;
+
 // Définir la configuration de base
 const config = {
     Title: 'Competition-hub',
     // API devient dynamique en fonction de l'environnement
-    API: import.meta.env.VITE_REACT_APP_ENV === 'PROD' ? import.meta.env.VITE_REACT_APP_API_URL : '/api', 
+    API: ENV === 'PROD' ? URL : '/api', 
     authAPI: '/project'
 };
 
