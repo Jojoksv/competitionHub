@@ -103,6 +103,8 @@ const challenges = [
   },
 ];
 
+console.log(import.meta.env.VITE_REACT_APP_ENV === 'PROD' ? import.meta.env.VITE_REACT_APP_API_URL : '/api');
+
 function Home(){
     const navigate = useNavigate()
     return(
