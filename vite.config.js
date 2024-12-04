@@ -7,12 +7,14 @@ export default defineConfig({
 
   server: {
     port: 5174,
-    proxy: import.meta.env.VITE_REACT_APP_ENV === "DEV" ? {
-      "/api": {
-        target: "http://localhost:8000",
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, "/"),
-      },
-    } : undefined,
+    proxy: import.meta.env.VITE_REACT_APP_ENV === "DEV" 
+      ? {
+          "/api": {
+            target: "http://localhost:8000",
+            changeOrigin: true,
+            rewrite: (path) => path.replace(/^\/api/, "/"),
+          },
+        }
+      : undefined,
   },
 })
