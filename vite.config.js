@@ -7,12 +7,12 @@ export default defineConfig({
 
   server: {
     port: 5174,
-    proxy: {
+    proxy: process.env.NODE_ENV === "DEV" ? {
       "/api": {
         target: "http://localhost:8000",
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, "/"),
       },
-    },
+    } : undefined,
   },
 })
